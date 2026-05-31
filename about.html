@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Just on the Spectrum Microschool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* design.md — Claude.com system · light mode (shared tokens with index.html) */
+    :root {
+      --primary:#cc785c; --primary-active:#a9583e; --primary-disabled:#e6dfd8;
+      --canvas:#faf9f5; --surface-soft:#f5f0e8; --surface-card:#efe9de;
+      --surface-cream-strong:#e8e0d2; --surface-dark:#181715; --surface-dark-elevated:#252320;
+      --hairline:#e6dfd8; --hairline-soft:#ebe6df;
+      --ink:#141413; --body-strong:#252523; --body:#3d3d3a; --muted:#6c6a64; --muted-soft:#8e8b82;
+      --on-primary:#ffffff; --on-dark:#faf9f5; --on-dark-soft:#a09d96;
+      --r-sm:6px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-pill:9999px;
+      --s-xs:8px; --s-sm:12px; --s-md:16px; --s-lg:24px; --s-xl:32px; --s-xxl:48px; --s-section:96px;
+      --font-display:"Cormorant Garamond","Tiempos Headline",Garamond,"Times New Roman",serif;
+      --font-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:var(--font-sans); font-size:16px; line-height:1.55;
+      color:var(--body); background:var(--canvas);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    h1, h2 { font-family:var(--font-display); font-weight:600; color:var(--ink); margin:0; }
+
+    /* ===== Shared top nav ===== */
+    .topnav {
+      position:sticky; top:0; z-index:10;
+      background:rgba(250,249,245,0.88); backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--hairline);
+    }
+    .topnav .inner {
+      max-width:760px; margin:0 auto; padding:0 24px;
+      height:64px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand { display:inline-flex; align-items:center; gap:9px; text-decoration:none; }
+    .brand .spike { width:18px; height:18px; color:var(--ink); flex:none; }
+    .brand span { font-size:15px; font-weight:500; color:var(--ink); letter-spacing:-0.01em; }
+    .navlinks { display:flex; gap:6px; }
+    .navlinks a {
+      font-size:14px; font-weight:500; color:var(--muted); text-decoration:none;
+      padding:8px 14px; border-radius:var(--r-md); transition:background .15s ease, color .15s ease;
+    }
+    .navlinks a:hover { color:var(--ink); background:var(--surface-card); }
+    .navlinks a[aria-current="page"] { color:var(--ink); background:var(--surface-card); }
+
+    .page { max-width:760px; margin:0 auto; padding:72px 24px; }
+
+    .masthead { margin-bottom:var(--s-xxl); }
+    h1 { font-size:clamp(38px,6vw,56px); line-height:1.05; letter-spacing:-0.02em; margin-bottom:var(--s-md); }
+    .lede { font-size:18px; color:var(--muted); max-width:54ch; margin:0; }
+
+    .prose h2 {
+      font-size:clamp(26px,4vw,32px); line-height:1.15; letter-spacing:-0.02em;
+      margin:var(--s-xxl) 0 var(--s-sm);
+    }
+    .prose p { margin:0 0 var(--s-md); color:var(--body); font-size:16.5px; }
+    .prose strong { color:var(--ink); font-weight:500; }
+
+    .feature-list { list-style:none; padding:0; margin:var(--s-sm) 0 0; display:grid; gap:var(--s-sm); }
+    .feature-list li {
+      background:var(--surface-card); border-radius:var(--r-lg);
+      padding:14px 18px; font-size:15.5px; color:var(--ink);
+      display:flex; align-items:center; gap:12px;
+    }
+    .feature-list li::before {
+      content:""; width:7px; height:7px; border-radius:50%;
+      background:var(--primary); flex:none;
+    }
+
+    /* Coral callout — the fit note */
+    .callout {
+      background:var(--primary); color:var(--on-primary);
+      border-radius:var(--r-lg); padding:var(--s-xxl);
+      margin:var(--s-xxl) 0;
+    }
+    .callout p { margin:0; font-size:17px; line-height:1.5; }
+
+    /* CTA band linking to the questionnaire */
+    .cta-band {
+      background:var(--surface-card); border-radius:var(--r-lg);
+      padding:var(--s-xl); margin-top:var(--s-xxl); text-align:center;
+    }
+    .cta-band h2 { font-size:clamp(24px,4vw,30px); margin:0 0 var(--s-xs); }
+    .cta-band p { color:var(--muted); margin:0 0 var(--s-lg); }
+    .cta {
+      display:inline-block; font-family:var(--font-sans); font-size:15px; font-weight:500;
+      color:var(--on-primary); background:var(--primary); text-decoration:none;
+      border-radius:var(--r-md); padding:0 28px; height:48px; line-height:48px;
+      transition:background .15s ease;
+    }
+    .cta:hover { background:var(--primary-active); }
+
+    .site-footer { background:var(--surface-dark); color:var(--on-dark-soft); margin-top:var(--s-section); }
+    .site-footer .inner { max-width:760px; margin:0 auto; padding:56px 24px; }
+    .site-footer .brand .spike, .site-footer .brand span { color:var(--on-dark); }
+    .site-footer p { margin:16px 0 0; font-size:14px; max-width:52ch; }
+
+    @media (max-width:520px) {
+      .page { padding:48px 18px; }
+      .callout, .cta-band { padding:var(--s-lg); }
+      :root { --s-section:64px; }
+      .brand span { display:none; } /* keep just the mark on small screens */
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="Just on the Spectrum Microschool — home">
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum</span>
+      </a>
+      <nav class="navlinks">
+        <a href="index.html">Questionnaire</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
+      <h1>About Just on the Spectrum</h1>
+      <p class="lede">A child-led, family-centered microschool for home-educating families.</p>
+    </header>
+
+    <div class="prose">
+      <h2>Our model</h2>
+      <p>
+        Just on the Spectrum is <strong>not a traditional school or drop-off
+        program</strong>. Our child-led, family-centered model is designed for
+        home-educating families who believe parents are a child's most important
+        teacher and should remain actively involved as their child's primary
+        educator and dedicated 1:1 support person throughout the learning journey.
+      </p>
+
+      <h2>Flexibility over schedule</h2>
+      <p>
+        Because our families are home-educating, flexibility is key. We do not
+        replicate a traditional school schedule, attendance requirements, or
+        educational model. Instead, the learning journey is shaped around each
+        child and family.
+      </p>
+
+      <h2>What learning can look like</h2>
+      <p>Learning opportunities may include:</p>
+      <ul class="feature-list">
+        <li>Community experiences</li>
+        <li>Life skills</li>
+        <li>Communication development</li>
+        <li>Special interests</li>
+        <li>Academics</li>
+        <li>Recreation</li>
+        <li>Parent coaching</li>
+      </ul>
+
+      <div class="callout">
+        <p>
+          Families seeking a traditional school experience with daily attendance,
+          teacher-directed instruction, and responsibility transferred to staff may
+          not find this program to be the right fit.
+        </p>
+      </div>
+
+      <h2>Enrollment</h2>
+      <p>
+        Enrollment is limited and based on program fit, family alignment, safety
+        considerations, and available space. The questionnaire is the first step —
+        it helps us understand your family and whether our model is a good match.
+      </p>
+    </div>
+
+    <div class="cta-band">
+      <h2>Interested in joining?</h2>
+      <p>Tell us about your family and child to start the conversation.</p>
+      <a class="cta" href="index.html">Start the questionnaire</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span class="brand">
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum Microschool</span>
+      </span>
+      <p>Family-centered, child-led home education. Enrollment is limited and based on program fit, family alignment, safety considerations, and available space.</p>
+    </div>
+  </footer>
+</body>
+</html>

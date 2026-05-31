@@ -89,6 +89,30 @@
       padding: 72px 24px;
     }
 
+    /* ===== Shared top nav ===== */
+    .topnav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(250, 249, 245, 0.88); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .topnav .inner {
+      max-width: 760px; margin: 0 auto; padding: 0 24px;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; }
+    .brand span {
+      font-family: var(--font-sans); font-size: 15px; font-weight: 500;
+      letter-spacing: -0.01em; color: var(--ink);
+    }
+    .navlinks { display: flex; gap: 6px; }
+    .navlinks a {
+      font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none;
+      padding: 8px 14px; border-radius: var(--r-md);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .navlinks a:hover { color: var(--ink); background: var(--surface-card); }
+    .navlinks a[aria-current="page"] { color: var(--ink); background: var(--surface-card); }
+
     /* ===== Display headings — Cormorant serif, weight 500/600, negative tracking ===== */
     h1, h2, legend {
       font-family: var(--font-display);
@@ -336,15 +360,23 @@
   </style>
 </head>
 <body>
-  <main class="page">
-    <header class="masthead">
-      <span class="wordmark">
-        <!-- Anthropic-style 4-spoke radial spike mark -->
+  <div class="topnav">
+    <div class="inner">
+      <a class="brand" href="index.html" aria-label="Just on the Spectrum Microschool — home">
         <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
           <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
         </svg>
-        <span>Just on the Spectrum Microschool</span>
-      </span>
+        <span>Just on the Spectrum</span>
+      </a>
+      <nav class="navlinks">
+        <a href="index.html" aria-current="page">Questionnaire</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
       <h1>Family Interest &amp; Enrollment Questionnaire</h1>
       <p class="lede">Thank you for your interest in Just on the Spectrum Microschool.</p>
     </header>
