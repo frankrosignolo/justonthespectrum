@@ -379,6 +379,13 @@
     </section>
 
     <form id="questionnaire" novalidate>
+      <!-- Web3Forms configuration (emails submissions to justonthespectrum@gmail.com) -->
+      <input type="hidden" name="access_key" value="260606d1-ce3f-4ca3-ab49-137dbb2da3db" />
+      <input type="hidden" name="subject" value="New Enrollment Questionnaire — Just on the Spectrum" />
+      <input type="hidden" name="from_name" value="Just on the Spectrum — Website" />
+      <!-- Honeypot: hidden from people, catches bots -->
+      <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
       <!-- ============ ABOUT YOU ============ -->
       <fieldset>
         <legend>About You</legend>
@@ -386,7 +393,7 @@
 
         <div class="field">
           <label class="q" for="name">Your name <span class="req">*</span></label>
-          <input type="text" id="name" name="name" autocomplete="name"
+          <input type="text" id="name" name="Your name" autocomplete="name"
                  placeholder="First and last name" required />
         </div>
 
@@ -399,23 +406,23 @@
         <div class="field">
           <span class="q-label">Are you located in Texas? <span class="req">*</span></span>
           <div class="choices" role="radiogroup" aria-label="Located in Texas">
-            <label class="choice"><input type="radio" name="in_texas" value="Yes" required /><span class="dot"></span>Yes</label>
-            <label class="choice"><input type="radio" name="in_texas" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Located in Texas?" value="Yes" required /><span class="dot"></span>Yes</label>
+            <label class="choice"><input type="radio" name="Located in Texas?" value="No" /><span class="dot"></span>No</label>
           </div>
         </div>
 
         <div class="field">
           <span class="q-label">Did you receive TEFA funding? <span class="req">*</span></span>
           <div class="choices" role="radiogroup" aria-label="TEFA funding">
-            <label class="choice"><input type="radio" name="tefa" value="Yes" required /><span class="dot"></span>Yes</label>
-            <label class="choice"><input type="radio" name="tefa" value="No" /><span class="dot"></span>No</label>
-            <label class="choice"><input type="radio" name="tefa" value="Not sure" /><span class="dot"></span>Not sure</label>
+            <label class="choice"><input type="radio" name="Received TEFA funding?" value="Yes" required /><span class="dot"></span>Yes</label>
+            <label class="choice"><input type="radio" name="Received TEFA funding?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Received TEFA funding?" value="Not sure" /><span class="dot"></span>Not sure</label>
           </div>
         </div>
 
         <div class="field conditional" id="tefa_amount_wrap" hidden>
           <label class="q" for="tefa_amount">If yes, what amount were you awarded?</label>
-          <input type="text" id="tefa_amount" name="tefa_amount"
+          <input type="text" id="tefa_amount" name="TEFA amount awarded"
                  inputmode="numeric" placeholder="e.g. $10,000" />
         </div>
       </fieldset>
@@ -429,36 +436,36 @@
 
         <div class="field">
           <label class="q" for="child_age">Child's age <span class="req">*</span></label>
-          <input type="number" id="child_age" name="child_age" min="0" max="22"
+          <input type="number" id="child_age" name="Child's age" min="0" max="22"
                  placeholder="Age in years" required />
         </div>
 
         <div class="field">
           <span class="q-label">Does your child have an autism diagnosis? <span class="req">*</span></span>
           <div class="choices" role="radiogroup" aria-label="Autism diagnosis">
-            <label class="choice"><input type="radio" name="autism_dx" value="Yes" required /><span class="dot"></span>Yes</label>
-            <label class="choice"><input type="radio" name="autism_dx" value="No" /><span class="dot"></span>No</label>
-            <label class="choice"><input type="radio" name="autism_dx" value="In process" /><span class="dot"></span>In process</label>
+            <label class="choice"><input type="radio" name="Autism diagnosis?" value="Yes" required /><span class="dot"></span>Yes</label>
+            <label class="choice"><input type="radio" name="Autism diagnosis?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Autism diagnosis?" value="In process" /><span class="dot"></span>In process</label>
           </div>
         </div>
 
         <div class="field conditional" id="support_level_wrap" hidden>
           <span class="q-label">If yes, what support level? <span class="optional">optional</span></span>
           <div class="choices" role="radiogroup" aria-label="Support level">
-            <label class="choice"><input type="radio" name="support_level" value="Level 1" /><span class="dot"></span>Level 1</label>
-            <label class="choice"><input type="radio" name="support_level" value="Level 2" /><span class="dot"></span>Level 2</label>
-            <label class="choice"><input type="radio" name="support_level" value="Level 3" /><span class="dot"></span>Level 3</label>
-            <label class="choice"><input type="radio" name="support_level" value="Not sure" /><span class="dot"></span>Not sure</label>
+            <label class="choice"><input type="radio" name="Autism support level" value="Level 1" /><span class="dot"></span>Level 1</label>
+            <label class="choice"><input type="radio" name="Autism support level" value="Level 2" /><span class="dot"></span>Level 2</label>
+            <label class="choice"><input type="radio" name="Autism support level" value="Level 3" /><span class="dot"></span>Level 3</label>
+            <label class="choice"><input type="radio" name="Autism support level" value="Not sure" /><span class="dot"></span>Not sure</label>
           </div>
         </div>
 
         <div class="field">
           <span class="q-label">How does your child primarily communicate? <span class="req">*</span></span>
           <div class="choices" role="radiogroup" aria-label="Communication">
-            <label class="choice"><input type="radio" name="communication" value="Verbal" required /><span class="dot"></span>Verbal</label>
-            <label class="choice"><input type="radio" name="communication" value="Non-verbal" /><span class="dot"></span>Non-verbal</label>
-            <label class="choice"><input type="radio" name="communication" value="A mix" /><span class="dot"></span>A mix</label>
-            <label class="choice"><input type="radio" name="communication" value="Uses AAC or other tools" /><span class="dot"></span>Uses AAC or other tools</label>
+            <label class="choice"><input type="radio" name="Primary communication" value="Verbal" required /><span class="dot"></span>Verbal</label>
+            <label class="choice"><input type="radio" name="Primary communication" value="Non-verbal" /><span class="dot"></span>Non-verbal</label>
+            <label class="choice"><input type="radio" name="Primary communication" value="A mix" /><span class="dot"></span>A mix</label>
+            <label class="choice"><input type="radio" name="Primary communication" value="Uses AAC or other tools" /><span class="dot"></span>Uses AAC or other tools</label>
           </div>
         </div>
 
@@ -467,7 +474,7 @@
             Any other diagnoses or support needs you'd like us to know about?
             <span class="optional">optional</span>
           </label>
-          <textarea id="other_dx" name="other_dx"
+          <textarea id="other_dx" name="Other diagnoses / support needs"
                     placeholder="Share anything that would help us support your child."></textarea>
         </div>
       </fieldset>
@@ -482,18 +489,18 @@
         <div class="field">
           <span class="q-label">Do you currently homeschool your child? <span class="req">*</span></span>
           <div class="choices" role="radiogroup" aria-label="Currently homeschool">
-            <label class="choice"><input type="radio" name="homeschool" value="Yes" required /><span class="dot"></span>Yes</label>
-            <label class="choice"><input type="radio" name="homeschool" value="No" /><span class="dot"></span>No</label>
-            <label class="choice"><input type="radio" name="homeschool" value="Just getting started" /><span class="dot"></span>Just getting started</label>
+            <label class="choice"><input type="radio" name="Currently homeschooling?" value="Yes" required /><span class="dot"></span>Yes</label>
+            <label class="choice"><input type="radio" name="Currently homeschooling?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Currently homeschooling?" value="Just getting started" /><span class="dot"></span>Just getting started</label>
           </div>
         </div>
 
         <div class="field conditional" id="homeschool_length_wrap" hidden>
           <span class="q-label">If yes, how long?</span>
           <div class="choices" role="radiogroup" aria-label="How long homeschooling">
-            <label class="choice"><input type="radio" name="homeschool_length" value="Less than a year" /><span class="dot"></span>Less than a year</label>
-            <label class="choice"><input type="radio" name="homeschool_length" value="1–2 years" /><span class="dot"></span>1–2 years</label>
-            <label class="choice"><input type="radio" name="homeschool_length" value="3+ years" /><span class="dot"></span>3+ years</label>
+            <label class="choice"><input type="radio" name="Length homeschooling" value="Less than a year" /><span class="dot"></span>Less than a year</label>
+            <label class="choice"><input type="radio" name="Length homeschooling" value="1–2 years" /><span class="dot"></span>1–2 years</label>
+            <label class="choice"><input type="radio" name="Length homeschooling" value="3+ years" /><span class="dot"></span>3+ years</label>
           </div>
         </div>
       </fieldset>
@@ -535,18 +542,45 @@
       });
     }
 
-    toggle('tefa', 'tefa_amount_wrap', ['Yes']);
-    toggle('autism_dx', 'support_level_wrap', ['Yes']);
-    toggle('homeschool', 'homeschool_length_wrap', ['Yes']);
+    toggle('Received TEFA funding?', 'tefa_amount_wrap', ['Yes']);
+    toggle('Autism diagnosis?', 'support_level_wrap', ['Yes']);
+    toggle('Currently homeschooling?', 'homeschool_length_wrap', ['Yes']);
 
-    // No backend wired up yet — validate, then confirm.
-    document.getElementById('questionnaire').addEventListener('submit', function (e) {
+    // Submit to Web3Forms via fetch so the visitor stays on the page.
+    var form = document.getElementById('questionnaire');
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var form = e.target;
       if (!form.checkValidity()) { form.reportValidity(); return; }
+
       var btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Thank you — submitted!';
+      var label = btn.textContent;
       btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      // Personalize the subject line with the family's name.
+      var parent = (form.elements['Your name'].value || '').trim();
+      form.elements['subject'].value = parent
+        ? 'New Enrollment Questionnaire — ' + parent
+        : 'New Enrollment Questionnaire — Just on the Spectrum';
+
+      try {
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        var data = await res.json();
+        if (res.ok && data.success) {
+          form.querySelector('.actions').innerHTML =
+            '<p style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin:0 0 6px;">Thank you — your questionnaire has been submitted.</p>' +
+            '<p class="privacy">We\'ll be in touch at the email you provided. You can close this page.</p>';
+        } else {
+          throw new Error((data && data.message) || 'Submission failed');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = label;
+        alert('Sorry — something went wrong submitting the form. Please try again, or email justonthespectrum@gmail.com directly.');
+      }
     });
   </script>
 </body>
