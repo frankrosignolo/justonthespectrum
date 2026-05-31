@@ -7,210 +7,244 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap"
     rel="stylesheet"
   />
   <style>
-    /* ===== design.md — light mode tokens ===== */
+    /* ============================================================
+       design.md — Claude.com system · light mode
+       Cream canvas · coral primary · dark navy footer
+       ============================================================ */
     :root {
-      /* Warm paper / Anthropic-flavored neutrals */
-      --bg:            #faf9f5;
-      --bg-subtle:     #f3f1ea;
-      --surface:       #ffffff;
-      --surface-alt:   #fbfaf6;
+      /* Brand & accent */
+      --primary:            #cc785c;
+      --primary-active:     #a9583e;
+      --primary-disabled:   #e6dfd8;
 
-      /* Ink */
-      --text:          #20201d;
-      --text-muted:    #6b675f;
-      --text-faint:    #908b81;
+      /* Surfaces */
+      --canvas:             #faf9f5;
+      --surface-soft:       #f5f0e8;
+      --surface-card:       #efe9de;
+      --surface-cream-strong:#e8e0d2;
+      --surface-dark:       #181715;
+      --surface-dark-elevated:#252320;
 
       /* Lines */
-      --border:        #e7e4db;
-      --border-strong: #d8d4c8;
+      --hairline:           #e6dfd8;
+      --hairline-soft:      #ebe6df;
 
-      /* Claude coral accent */
-      --accent:        #d97757;
-      --accent-hover:  #c45d3a;
-      --accent-soft:   #f7e9e2;
-      --accent-ring:   rgba(217, 119, 87, 0.28);
+      /* Text */
+      --ink:                #141413;
+      --body-strong:        #252523;
+      --body:               #3d3d3a;
+      --muted:              #6c6a64;
+      --muted-soft:         #8e8b82;
+      --on-primary:         #ffffff;
+      --on-dark:            #faf9f5;
+      --on-dark-soft:       #a09d96;
 
-      /* Radii */
-      --r-sm: 8px;
-      --r-md: 12px;
-      --r-lg: 18px;
+      /* Semantic */
+      --error:              #c64545;
 
-      /* Shadow */
-      --shadow-sm: 0 1px 2px rgba(32, 32, 29, 0.04);
-      --shadow-md: 0 4px 16px rgba(32, 32, 29, 0.06), 0 1px 3px rgba(32, 32, 29, 0.05);
+      /* Radius */
+      --r-sm: 6px;
+      --r-md: 8px;
+      --r-lg: 12px;
+      --r-xl: 16px;
+      --r-pill: 9999px;
+
+      /* Spacing (4px base) */
+      --s-xs: 8px;
+      --s-sm: 12px;
+      --s-md: 16px;
+      --s-lg: 24px;
+      --s-xl: 32px;
+      --s-xxl: 48px;
+      --s-section: 96px;
 
       /* Type */
-      --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
-      --font-sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-display: "Cormorant Garamond", "Tiempos Headline", Garamond, "Times New Roman", serif;
+      --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --ring: 0 0 0 3px rgba(204, 120, 92, 0.15);
     }
 
     * { box-sizing: border-box; }
-
     html { -webkit-text-size-adjust: 100%; }
 
     body {
       margin: 0;
       font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
+      font-size: 16px;       /* body-md */
+      line-height: 1.55;
+      color: var(--body);
+      background: var(--canvas);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     .page {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 56px 24px 96px;
+      padding: 72px 24px;
     }
 
-    /* ===== Header ===== */
-    .masthead {
-      text-align: center;
-      margin-bottom: 40px;
+    /* ===== Display headings — Cormorant serif, weight 500/600, negative tracking ===== */
+    h1, h2, legend {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0;
     }
-    .eyebrow {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 20px;
+
+    /* ===== Masthead ===== */
+    .masthead { margin-bottom: var(--s-xxl); }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: var(--s-lg);
     }
-    h1 {
-      font-family: var(--font-serif);
+    .spike { width: 18px; height: 18px; color: var(--ink); flex: none; }
+    .wordmark span {
+      font-family: var(--font-sans);
+      font-size: 15px;
       font-weight: 500;
-      font-size: clamp(30px, 5vw, 42px);
-      line-height: 1.12;
       letter-spacing: -0.01em;
-      margin: 0 0 14px;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 56px);  /* display-xl-ish */
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--s-md);
     }
     .lede {
-      color: var(--text-muted);
-      font-size: 17px;
-      max-width: 52ch;
-      margin: 0 auto;
+      font-size: 18px;          /* title-md */
+      color: var(--muted);
+      max-width: 54ch;
+      margin: 0;
     }
 
-    /* ===== Intro / context card ===== */
+    /* ===== Context (cream feature card) — color block, no shadow ===== */
     .context {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--surface-card);
       border-radius: var(--r-lg);
-      box-shadow: var(--shadow-md);
-      padding: 28px 30px;
-      margin-bottom: 40px;
+      padding: var(--s-xl);
+      margin-bottom: var(--s-xl);
     }
     .context p {
-      margin: 0 0 14px;
-      color: var(--text-muted);
-      font-size: 15.5px;
+      margin: 0 0 var(--s-md);
+      color: var(--body);
+      font-size: 16px;
     }
     .context p:last-child { margin-bottom: 0; }
-    .context strong { color: var(--text); font-weight: 600; }
-    .context .note {
-      border-left: 3px solid var(--accent);
-      padding-left: 16px;
-      color: var(--text);
+    .context strong { color: var(--ink); font-weight: 500; }
+
+    /* ===== Coral callout card — full-bleed, the one place coral goes generous ===== */
+    .callout {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-radius: var(--r-lg);
+      padding: var(--s-xxl);
+      margin-bottom: var(--s-section);
+    }
+    .callout p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.5;
     }
 
     /* ===== Form ===== */
-    form { display: block; }
-
     fieldset {
       border: none;
-      margin: 0 0 36px;
+      margin: 0 0 var(--s-section);
       padding: 0;
     }
     legend {
-      font-family: var(--font-serif);
-      font-weight: 600;
-      font-size: 22px;
-      letter-spacing: -0.01em;
-      color: var(--text);
-      padding: 0;
-      margin-bottom: 4px;
+      font-size: clamp(28px, 4vw, 36px);  /* display-md */
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--s-xs);
     }
     .section-hint {
-      color: var(--text-faint);
+      color: var(--muted-soft);
       font-size: 14px;
-      margin: 0 0 22px;
+      margin: 0 0 var(--s-lg);
     }
 
-    .field { margin-bottom: 22px; }
+    .field { margin-bottom: var(--s-lg); }
 
-    label.q,
-    .q-label {
+    .q-label, label.q {
       display: block;
-      font-weight: 500;
-      font-size: 15.5px;
-      color: var(--text);
-      margin-bottom: 9px;
+      font-weight: 500;       /* title-sm */
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 10px;
     }
-    .req { color: var(--accent); margin-left: 2px; }
+    .req { color: var(--primary); margin-left: 2px; }
     .optional {
-      color: var(--text-faint);
+      color: var(--muted-soft);
       font-weight: 400;
       font-size: 13px;
       margin-left: 6px;
     }
 
-    /* Text inputs */
+    /* text-input */
     input[type="text"],
     input[type="email"],
     input[type="number"],
     textarea {
       width: 100%;
       font-family: inherit;
-      font-size: 15.5px;
-      color: var(--text);
-      background: var(--surface);
-      border: 1px solid var(--border-strong);
-      border-radius: var(--r-sm);
-      padding: 12px 14px;
+      font-size: 16px;
+      color: var(--ink);
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-md);
+      padding: 10px 14px;
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
+    input { height: 44px; }
     input::placeholder,
-    textarea::placeholder { color: var(--text-faint); }
+    textarea::placeholder { color: var(--muted-soft); }
     input:focus,
     textarea:focus {
       outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-ring);
+      border-color: var(--primary);   /* text-input-focused */
+      box-shadow: var(--ring);
     }
-    textarea { resize: vertical; min-height: 92px; line-height: 1.55; }
+    textarea {
+      min-height: 96px;
+      line-height: 1.55;
+      resize: vertical;
+      padding: 12px 14px;
+    }
 
-    /* Choice groups (radio rendered as soft pills/cards) */
+    /* Choice groups — radios as cream selectable tiles */
     .choices {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: var(--s-sm);
     }
     .choice {
       position: relative;
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      padding: 11px 16px;
-      background: var(--surface);
-      border: 1px solid var(--border-strong);
+      min-height: 44px;
+      padding: 10px 16px;
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
       border-radius: var(--r-md);
       cursor: pointer;
       font-size: 15px;
-      color: var(--text);
-      transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+      color: var(--ink);
       user-select: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
     }
-    .choice:hover { border-color: var(--accent); }
     .choice input {
       position: absolute;
       opacity: 0;
@@ -220,92 +254,99 @@
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      border: 1.5px solid var(--border-strong);
+      border: 1.5px solid var(--muted-soft);
       flex: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
-    .choice:hover .dot { border-color: var(--accent); }
     .choice input:checked ~ .dot {
-      border-color: var(--accent);
-      background: var(--accent);
-      box-shadow: inset 0 0 0 3px var(--surface);
+      border-color: var(--primary);
+      background: var(--primary);
+      box-shadow: inset 0 0 0 3px var(--canvas);
     }
     .choice:has(input:checked) {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-      box-shadow: 0 0 0 1px var(--accent);
+      border-color: var(--primary);
+      background: var(--surface-cream-strong);
     }
-    .choice input:focus-visible ~ .dot {
-      box-shadow: 0 0 0 3px var(--accent-ring);
-    }
+    .choice input:focus-visible ~ .dot { box-shadow: var(--ring); }
 
-    /* Conditional / dependent field accent */
+    /* Conditional dependent blocks */
     .conditional {
-      border-left: 2px solid var(--accent-soft);
-      padding-left: 18px;
+      border-left: 1px solid var(--hairline);
+      padding-left: var(--s-lg);
       margin-left: 2px;
-    }
-
-    /* Submit */
-    .actions {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      margin-top: 8px;
-    }
-    button[type="submit"] {
-      font-family: inherit;
-      font-size: 16px;
-      font-weight: 500;
-      color: #fff;
-      background: var(--accent);
-      border: none;
-      border-radius: var(--r-md);
-      padding: 14px 30px;
-      cursor: pointer;
-      box-shadow: var(--shadow-sm);
-      transition: background 0.15s ease, transform 0.05s ease;
-    }
-    button[type="submit"]:hover { background: var(--accent-hover); }
-    button[type="submit"]:active { transform: translateY(1px); }
-    button[type="submit"]:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px var(--accent-ring);
-    }
-    .privacy {
-      color: var(--text-faint);
-      font-size: 13.5px;
     }
 
     hr.divider {
       border: none;
-      border-top: 1px solid var(--border);
-      margin: 40px 0;
+      border-top: 1px solid var(--hairline-soft);
+      margin: 0 0 var(--s-section);
     }
 
-    footer {
-      text-align: center;
-      color: var(--text-faint);
-      font-size: 13px;
-      margin-top: 56px;
+    /* button-primary */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--s-sm);
+    }
+    button[type="submit"] {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--on-primary);
+      background: var(--primary);
+      border: none;
+      border-radius: var(--r-md);
+      padding: 0 28px;
+      height: 48px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    button[type="submit"]:active { background: var(--primary-active); }
+    button[type="submit"]:hover { background: var(--primary-active); }
+    button[type="submit"]:focus-visible { outline: none; box-shadow: var(--ring); }
+    button[type="submit"]:disabled { background: var(--primary-disabled); color: var(--muted); cursor: default; }
+    .privacy { color: var(--muted-soft); font-size: 13px; }
+
+    /* ===== Dark navy footer — closes the page, never inverts ===== */
+    .site-footer {
+      background: var(--surface-dark);
+      color: var(--on-dark-soft);
+      margin-top: var(--s-section);
+    }
+    .site-footer .inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    .site-footer .wordmark span,
+    .site-footer .spike { color: var(--on-dark); }
+    .site-footer p {
+      margin: 16px 0 0;
+      font-size: 14px;
+      max-width: 52ch;
     }
 
     @media (max-width: 520px) {
-      .page { padding: 36px 18px 72px; }
-      .context { padding: 22px 20px; }
-      .choices { gap: 8px; }
+      .page { padding: 48px 18px; }
+      .context, .callout { padding: var(--s-lg); }
+      :root { --s-section: 64px; }
     }
   </style>
 </head>
 <body>
   <main class="page">
     <header class="masthead">
-      <span class="eyebrow">Just on the Spectrum Microschool</span>
+      <span class="wordmark">
+        <!-- Anthropic-style 4-spoke radial spike mark -->
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum Microschool</span>
+      </span>
       <h1>Family Interest &amp; Enrollment Questionnaire</h1>
-      <p class="lede">
-        Thank you for your interest in Just on the Spectrum Microschool.
-      </p>
+      <p class="lede">Thank you for your interest in Just on the Spectrum Microschool.</p>
     </header>
 
     <section class="context" aria-label="About our program">
@@ -323,14 +364,17 @@
         experiences, life skills, communication development, special interests,
         academics, recreation, and parent coaching.
       </p>
-      <p class="note">
-        Families seeking a traditional school experience with daily attendance,
-        teacher-directed instruction, and responsibility transferred to staff may
-        not find this program to be the right fit.
-      </p>
       <p>
         Enrollment is limited and based on program fit, family alignment, safety
         considerations, and available space.
+      </p>
+    </section>
+
+    <section class="callout" aria-label="Important note about fit">
+      <p>
+        Families seeking a traditional school experience with daily attendance,
+        teacher-directed instruction, and responsibility transferred to staff may
+        not find this program to be the right fit.
       </p>
     </section>
 
@@ -459,14 +503,22 @@
         <p class="privacy">Your responses are shared only with the Just on the Spectrum enrollment team.</p>
       </div>
     </form>
-
-    <footer>
-      Just on the Spectrum Microschool · Family-centered, child-led home education
-    </footer>
   </main>
 
+  <footer class="site-footer">
+    <div class="inner">
+      <span class="wordmark">
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum Microschool</span>
+      </span>
+      <p>Family-centered, child-led home education. Enrollment is limited and based on program fit, family alignment, safety considerations, and available space.</p>
+    </div>
+  </footer>
+
   <script>
-    // Show/hide dependent fields based on prior answers.
+    // Reveal dependent fields based on prior answers; clear them when hidden.
     function toggle(triggerName, wrapId, showValues) {
       var wrap = document.getElementById(wrapId);
       document.querySelectorAll('input[name="' + triggerName + '"]').forEach(function (input) {
@@ -474,7 +526,6 @@
           var show = showValues.indexOf(input.value) !== -1 && input.checked;
           wrap.hidden = !show;
           if (!show) {
-            // Clear any selection/value inside the hidden block.
             wrap.querySelectorAll('input, textarea').forEach(function (el) {
               if (el.type === 'radio' || el.type === 'checkbox') el.checked = false;
               else el.value = '';
@@ -488,21 +539,14 @@
     toggle('autism_dx', 'support_level_wrap', ['Yes']);
     toggle('homeschool', 'homeschool_length_wrap', ['Yes']);
 
-    // Basic submit handling (no backend wired up yet).
+    // No backend wired up yet — validate, then confirm.
     document.getElementById('questionnaire').addEventListener('submit', function (e) {
       e.preventDefault();
       var form = e.target;
-
-      // Native validation for required fields.
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
+      if (!form.checkValidity()) { form.reportValidity(); return; }
       var btn = form.querySelector('button[type="submit"]');
       btn.textContent = 'Thank you — submitted!';
       btn.disabled = true;
-      btn.style.background = 'var(--accent-hover)';
     });
   </script>
 </body>
