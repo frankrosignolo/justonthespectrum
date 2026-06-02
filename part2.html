@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Interest &amp; Enrollment Questionnaire (Part 2) — Just on the Spectrum Microschool</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* design.md — Claude.com system · light mode */
+    :root {
+      --primary:#cc785c; --primary-active:#a9583e; --primary-disabled:#e6dfd8;
+      --canvas:#faf9f5; --surface-soft:#f5f0e8; --surface-card:#efe9de;
+      --surface-cream-strong:#e8e0d2; --surface-dark:#181715; --surface-dark-elevated:#252320;
+      --hairline:#e6dfd8; --hairline-soft:#ebe6df;
+      --ink:#141413; --body-strong:#252523; --body:#3d3d3a; --muted:#6c6a64; --muted-soft:#8e8b82;
+      --on-primary:#ffffff; --on-dark:#faf9f5; --on-dark-soft:#a09d96;
+      --r-sm:6px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-pill:9999px;
+      --s-xs:8px; --s-sm:12px; --s-md:16px; --s-lg:24px; --s-xl:32px; --s-xxl:48px; --s-section:96px;
+      --font-display:"Cormorant Garamond","Tiempos Headline",Garamond,"Times New Roman",serif;
+      --font-sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      --ring:0 0 0 3px rgba(204,120,92,0.15);
+    }
+    * { box-sizing:border-box; }
+    html { -webkit-text-size-adjust:100%; }
+    body {
+      margin:0; font-family:var(--font-sans); font-size:16px; line-height:1.55;
+      color:var(--body); background:var(--canvas);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    .page { max-width:760px; margin:0 auto; padding:72px 24px; }
+    h1, legend, .subhead { font-family:var(--font-display); font-weight:600; color:var(--ink); margin:0; }
+
+    .masthead { margin-bottom:var(--s-xl); }
+    .wordmark { display:inline-flex; align-items:center; gap:9px; margin-bottom:var(--s-lg); }
+    .spike { width:18px; height:18px; color:var(--ink); flex:none; }
+    .wordmark span { font-size:15px; font-weight:500; letter-spacing:-0.01em; color:var(--ink); }
+    .eyebrow {
+      display:inline-block; font-size:13px; font-weight:500; letter-spacing:0.06em; text-transform:uppercase;
+      color:var(--primary); margin-bottom:10px;
+    }
+    h1 { font-size:clamp(34px,5.5vw,50px); line-height:1.06; letter-spacing:-0.02em; margin-bottom:var(--s-md); }
+    .lede { font-size:18px; color:var(--muted); max-width:58ch; margin:0; }
+
+    .context { background:var(--surface-card); border-radius:var(--r-lg); padding:var(--s-xl); margin-bottom:var(--s-xxl); }
+    .context p { margin:0 0 var(--s-md); color:var(--body); font-size:16px; }
+    .context p:last-child { margin-bottom:0; }
+    .context strong { color:var(--ink); font-weight:500; }
+
+    fieldset { border:none; margin:0 0 var(--s-xxl); padding:0; }
+    legend { font-size:clamp(26px,4vw,34px); line-height:1.15; letter-spacing:-0.02em; margin-bottom:var(--s-xs); }
+    .subhead { font-size:20px; letter-spacing:-0.01em; margin:var(--s-xl) 0 var(--s-sm); }
+    .section-hint { color:var(--muted-soft); font-size:14px; margin:0 0 var(--s-lg); }
+    .field { margin-bottom:var(--s-lg); }
+
+    .q-label, label.q { display:block; font-weight:500; font-size:16px; color:var(--ink); margin-bottom:10px; }
+    .req { color:var(--primary); margin-left:2px; }
+    .optional { color:var(--muted-soft); font-weight:400; font-size:13px; margin-left:6px; }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+      width:100%; font-family:inherit; font-size:16px; color:var(--ink);
+      background:var(--canvas); border:1px solid var(--hairline); border-radius:var(--r-md);
+      padding:10px 14px; transition:border-color .15s ease, box-shadow .15s ease;
+    }
+    input, select { height:44px; }
+    input::placeholder, textarea::placeholder { color:var(--muted-soft); }
+    input:focus, textarea:focus, select:focus { outline:none; border-color:var(--primary); box-shadow:var(--ring); }
+    textarea { min-height:90px; line-height:1.55; resize:vertical; padding:12px 14px; }
+    select {
+      appearance:none; -webkit-appearance:none; padding-right:38px; cursor:pointer;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236c6a64' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+      background-repeat:no-repeat; background-position:right 13px center;
+    }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:var(--s-md); }
+    @media (max-width:560px){ .two-col { grid-template-columns:1fr; } }
+
+    .choices { display:flex; flex-wrap:wrap; gap:var(--s-sm); }
+    .choices.stack { flex-direction:column; align-items:stretch; }
+    .choices.stack .choice, .choices.stack .choice-check { width:100%; }
+    .choice, .choice-check {
+      position:relative; display:inline-flex; align-items:center; gap:10px;
+      min-height:44px; padding:10px 16px; background:var(--canvas);
+      border:1px solid var(--hairline); border-radius:var(--r-md);
+      cursor:pointer; font-size:15px; color:var(--ink); user-select:none;
+      transition:border-color .15s ease, background .15s ease;
+    }
+    .choice input, .choice-check input { position:absolute; opacity:0; pointer-events:none; }
+    .dot { width:16px; height:16px; border-radius:50%; border:1.5px solid var(--muted-soft); flex:none; transition:border-color .15s, box-shadow .15s, background .15s; }
+    .choice input:checked ~ .dot { border-color:var(--primary); background:var(--primary); box-shadow:inset 0 0 0 3px var(--canvas); }
+    .choice:has(input:checked) { border-color:var(--primary); background:var(--surface-cream-strong); }
+    .box { width:17px; height:17px; border-radius:5px; border:1.5px solid var(--muted-soft); flex:none; display:grid; place-items:center; transition:border-color .15s, background .15s; }
+    .box::after { content:""; width:4px; height:8px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg) scale(0); transform-origin:center; transition:transform .12s ease; margin-top:-2px; }
+    .choice-check input:checked ~ .box { background:var(--primary); border-color:var(--primary); }
+    .choice-check input:checked ~ .box::after { transform:rotate(45deg) scale(1); }
+    .choice-check:has(input:checked) { border-color:var(--primary); background:var(--surface-cream-strong); }
+    .choice input:focus-visible ~ .dot, .choice-check input:focus-visible ~ .box { box-shadow:var(--ring); }
+
+    .conditional { border-left:1px solid var(--hairline); padding-left:var(--s-lg); margin-left:2px; }
+
+    .scale-key { background:var(--surface-soft); border-radius:var(--r-lg); padding:14px 18px; font-size:14px; color:var(--muted); margin-bottom:var(--s-md); }
+    .scale-key strong { color:var(--ink); font-weight:500; }
+    .matrix { border:1px solid var(--hairline); border-radius:var(--r-lg); overflow:hidden; }
+    .matrix-row { display:grid; grid-template-columns:1fr 230px; gap:16px; align-items:center; padding:11px 18px; border-top:1px solid var(--hairline-soft); }
+    .matrix-row:first-child { border-top:none; }
+    .matrix-row .approach { font-size:15px; color:var(--ink); }
+    .matrix-row select { height:40px; font-size:14px; }
+    @media (max-width:560px){ .matrix-row { grid-template-columns:1fr; gap:8px; } }
+
+    hr.divider { border:none; border-top:1px solid var(--hairline-soft); margin:0 0 var(--s-xxl); }
+
+    .actions { display:flex; flex-direction:column; align-items:flex-start; gap:var(--s-sm); }
+    button[type="submit"] {
+      font-family:var(--font-sans); font-size:15px; font-weight:500; line-height:1; color:var(--on-primary);
+      background:var(--primary); border:none; border-radius:var(--r-md); padding:0 28px; height:48px; cursor:pointer;
+      transition:background .15s ease;
+    }
+    button[type="submit"]:hover { background:var(--primary-active); }
+    button[type="submit"]:disabled { background:var(--primary-disabled); color:var(--muted); cursor:default; }
+    button[type="submit"]:focus-visible { outline:none; box-shadow:var(--ring); }
+    .privacy { color:var(--muted-soft); font-size:13px; }
+
+    .site-footer { background:var(--surface-dark); color:var(--on-dark-soft); margin-top:var(--s-section); }
+    .site-footer .inner { max-width:760px; margin:0 auto; padding:56px 24px; }
+    .site-footer .wordmark span, .site-footer .spike { color:var(--on-dark); }
+    .site-footer p { margin:16px 0 0; font-size:14px; max-width:52ch; }
+
+    @media (max-width:520px) {
+      .page { padding:48px 18px; }
+      .context { padding:var(--s-lg); }
+      :root { --s-section:64px; --s-xxl:36px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <span class="wordmark">
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum Microschool</span>
+      </span>
+      <span class="eyebrow">Part 2</span>
+      <h1>Family Interest &amp; Enrollment Questionnaire</h1>
+      <p class="lede">A more detailed follow-up for families continuing the enrollment conversation.</p>
+    </header>
+
+    <form id="questionnaire" novalidate>
+      <!-- Web3Forms config -->
+      <input type="hidden" name="access_key" value="260606d1-ce3f-4ca3-ab49-137dbb2da3db" />
+      <input type="hidden" name="subject" value="Enrollment Questionnaire (Part 2) — Just on the Spectrum" />
+      <input type="hidden" name="from_name" value="Just on the Spectrum — Part 2 Form" />
+      <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <!-- ============ FUNDING ACKNOWLEDGEMENT ============ -->
+      <fieldset>
+        <legend>Funding Acknowledgement</legend>
+        <div class="context">
+          <p>You indicated that your child has been approved for TEFA funding under the Private School pathway.</p>
+          <p>Please note that enrollment in Just on the Spectrum Microschool is <strong>contingent upon maintaining eligibility for the TEFA Private School program</strong>.</p>
+        </div>
+        <div class="field">
+          <span class="q-label">Please select one: <span class="req">*</span></span>
+          <div class="choices stack" role="radiogroup">
+            <label class="choice"><input type="radio" name="Funding acknowledgement" value="Awarded TEFA (Private School pathway); has not yet selected a private school through Odyssey." required /><span class="dot"></span>My child has been awarded TEFA funding under the Private School pathway and I have not yet selected a private school through the Odyssey platform.</label>
+            <label class="choice"><input type="radio" name="Funding acknowledgement" value="Awarded TEFA (Private School pathway); already selected a school through Odyssey but would like to explore changing." /><span class="dot"></span>My child has been awarded TEFA funding under the Private School pathway and I have already selected a private school through the Odyssey platform but would like to explore changing my selection.</label>
+            <label class="choice"><input type="radio" name="Funding acknowledgement" value="In TEFA application/appeal/review process; no final determination yet." /><span class="dot"></span>My child is currently in the TEFA application, appeal, or review process and has not yet received a final funding determination.</label>
+            <label class="choice"><input type="radio" name="Funding acknowledgement" value="Awarded TEFA (Home-School pathway); interested in Direct Pay." /><span class="dot"></span>My child has been awarded TEFA funding under the Home-School pathway, and I am interested in participating through the Direct Pay option.</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ PARENT INFORMATION ============ -->
+      <fieldset>
+        <legend>Parent Information</legend>
+        <div class="two-col">
+          <div class="field">
+            <label class="q" for="pg_name">Parent/Guardian name <span class="req">*</span></label>
+            <input type="text" id="pg_name" name="Parent/Guardian name" autocomplete="name" placeholder="First and last name" required />
+          </div>
+          <div class="field">
+            <label class="q" for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label class="q" for="phone">Phone</label>
+            <input type="tel" id="phone" name="Phone" autocomplete="tel" placeholder="(555) 555-5555" />
+          </div>
+          <div class="field">
+            <label class="q" for="city">City</label>
+            <input type="text" id="city" name="City" autocomplete="address-level2" placeholder="City" />
+          </div>
+          <div class="field">
+            <label class="q" for="state">State</label>
+            <input type="text" id="state" name="State" autocomplete="address-level1" placeholder="State" />
+          </div>
+        </div>
+        <div class="field">
+          <span class="q-label">How far are you willing to commute?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Willing to commute" value="Less than 15 minutes" /><span class="dot"></span>Less than 15 minutes</label>
+            <label class="choice"><input type="radio" name="Willing to commute" value="15–30 minutes" /><span class="dot"></span>15–30 minutes</label>
+            <label class="choice"><input type="radio" name="Willing to commute" value="30–60 minutes" /><span class="dot"></span>30–60 minutes</label>
+            <label class="choice"><input type="radio" name="Willing to commute" value="More than 60 minutes" /><span class="dot"></span>More than 60 minutes</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ STUDENT PROFILE ============ -->
+      <fieldset>
+        <legend>Student Profile</legend>
+        <div class="field">
+          <span class="q-label">Please check all that apply: <span class="optional">diagnoses, disabilities, or support needs</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" id="diag_autism" name="Diagnoses / support needs" value="Autism" /><span class="box"></span>Autism</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="ADHD" /><span class="box"></span>ADHD</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Intellectual Disability" /><span class="box"></span>Intellectual Disability</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Developmental Delay" /><span class="box"></span>Developmental Delay</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Speech/Language Disorder" /><span class="box"></span>Speech/Language Disorder</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Learning Disability" /><span class="box"></span>Learning Disability</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Deaf" /><span class="box"></span>Deaf</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Hard of Hearing" /><span class="box"></span>Hard of Hearing</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Blind" /><span class="box"></span>Blind</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Low Vision / Visually Impaired" /><span class="box"></span>Low Vision / Visually Impaired</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Physical Disability" /><span class="box"></span>Physical Disability</label>
+            <label class="choice-check"><input type="checkbox" name="Diagnoses / support needs" value="Medical Disability or Chronic Health Condition" /><span class="box"></span>Medical / Chronic Health Condition</label>
+            <label class="choice-check"><input type="checkbox" id="diag_other" name="Diagnoses / support needs" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="diag_other_wrap" hidden>
+          <label class="q" for="diag_other_desc">If Other, please describe:</label>
+          <textarea id="diag_other_desc" name="Other diagnosis (describe)"></textarea>
+        </div>
+        <div class="field conditional" id="autism_profile_wrap" hidden>
+          <span class="q-label">If your child has an Autism diagnosis: <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Level 1" /><span class="box"></span>Level 1</label>
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Level 2" /><span class="box"></span>Level 2</label>
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Level 3" /><span class="box"></span>Level 3</label>
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Verbal" /><span class="box"></span>Verbal</label>
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Non-verbal" /><span class="box"></span>Non-verbal</label>
+            <label class="choice-check"><input type="checkbox" name="Autism profile" value="Minimally-verbal, Non-speaking" /><span class="box"></span>Minimally-verbal, Non-speaking</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ MEDICAL & HEALTH ============ -->
+      <fieldset>
+        <legend>Medical, Health &amp; Emergency Information</legend>
+        <div class="field">
+          <span class="q-label">Does your child have any medical diagnoses, health conditions, or physical limitations we should be aware of?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Medical conditions present?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Medical conditions present?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="medical_wrap" hidden>
+          <label class="q" for="medical_desc">If yes, please describe:</label>
+          <textarea id="medical_desc" name="Medical conditions (describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ ALLERGIES ============ -->
+      <fieldset>
+        <legend>Allergies</legend>
+        <div class="field">
+          <span class="q-label">Does your child have any known allergies? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="No Known Allergies" /><span class="box"></span>No Known Allergies</label>
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="Food Allergies" /><span class="box"></span>Food Allergies</label>
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="Environmental Allergies" /><span class="box"></span>Environmental Allergies</label>
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="Medication Allergies" /><span class="box"></span>Medication Allergies</label>
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="Insect Allergies" /><span class="box"></span>Insect Allergies</label>
+            <label class="choice-check"><input type="checkbox" name="Allergies" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="allergy_list">If yes, please list all allergies and any known reactions: <span class="optional">optional</span></label>
+          <textarea id="allergy_list" name="Allergies (list & reactions)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ DIETARY ============ -->
+      <fieldset>
+        <legend>Dietary Considerations</legend>
+        <div class="field">
+          <span class="q-label">Does your child follow any special diet or have dietary restrictions? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="None" /><span class="box"></span>None</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Gluten Free" /><span class="box"></span>Gluten Free</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Dairy Free" /><span class="box"></span>Dairy Free</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Nut Free" /><span class="box"></span>Nut Free</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Vegetarian" /><span class="box"></span>Vegetarian</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Vegan" /><span class="box"></span>Vegan</label>
+            <label class="choice-check"><input type="checkbox" name="Dietary restrictions" value="Medical Diet" /><span class="box"></span>Medical Diet</label>
+            <label class="choice-check"><input type="checkbox" id="diet_other" name="Dietary restrictions" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="diet_other_wrap" hidden>
+          <label class="q" for="diet_other_desc">If Other, please describe:</label>
+          <textarea id="diet_other_desc" name="Other dietary (describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ MEDICATIONS ============ -->
+      <fieldset>
+        <legend>Medications</legend>
+        <div class="field">
+          <span class="q-label">Does your child currently take any medications that may impact participation?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Takes medications affecting participation?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Takes medications affecting participation?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="meds_wrap" hidden>
+          <label class="q" for="meds_list">If yes, please list:</label>
+          <textarea id="meds_list" name="Medications (list)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ SEIZURE HISTORY ============ -->
+      <fieldset>
+        <legend>Seizure History</legend>
+        <div class="field">
+          <span class="q-label">Does your child have a history of seizures?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Seizure history?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Seizure history?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="seizure_wrap" hidden>
+          <label class="q" for="seizure_desc">If yes, please describe any seizure diagnosis, frequency, triggers, or emergency procedures:</label>
+          <textarea id="seizure_desc" name="Seizure details"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ SENSORY ============ -->
+      <fieldset>
+        <legend>Sensory &amp; Environmental Considerations</legend>
+        <div class="field">
+          <span class="q-label">Any sensory sensitivities, triggers, fears, or environmental considerations? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Noise" /><span class="box"></span>Noise</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Crowds" /><span class="box"></span>Crowds</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Animals" /><span class="box"></span>Animals</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Water" /><span class="box"></span>Water</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Weather/Heat" /><span class="box"></span>Weather/Heat</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Toileting" /><span class="box"></span>Toileting</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Food" /><span class="box"></span>Food</label>
+            <label class="choice-check"><input type="checkbox" name="Sensory / environmental considerations" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="sensory_explain">Please explain: <span class="optional">optional</span></label>
+          <textarea id="sensory_explain" name="Sensory considerations (explain)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ TOILETING ============ -->
+      <fieldset>
+        <legend>Current Toileting Status</legend>
+        <div class="field">
+          <span class="q-label">Please select the option that best describes your child:</span>
+          <div class="choices stack" role="radiogroup">
+            <label class="choice"><input type="radio" name="Toileting status" value="Diapers full-time" /><span class="dot"></span>Diapers full-time</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Pull-ups full-time" /><span class="dot"></span>Pull-ups full-time</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Combination of diapers/pull-ups and toilet use" /><span class="dot"></span>Combination of diapers/pull-ups and toilet use</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Urine trained only" /><span class="dot"></span>Urine trained only</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Bowel movement trained only" /><span class="dot"></span>Bowel movement trained only</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Daytime toilet trained" /><span class="dot"></span>Daytime toilet trained</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Nighttime toilet trained" /><span class="dot"></span>Nighttime toilet trained</label>
+            <label class="choice"><input type="radio" name="Toileting status" value="Fully toilet trained" /><span class="dot"></span>Fully toilet trained</label>
+            <label class="choice"><input type="radio" id="toilet_other" name="Toileting status" value="Other" /><span class="dot"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="toilet_other_wrap" hidden>
+          <label class="q" for="toilet_other_desc">If Other, please describe:</label>
+          <textarea id="toilet_other_desc" name="Toileting status (other, describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ COMMUNICATION ============ -->
+      <fieldset>
+        <legend>Communication Profile</legend>
+        <div class="field">
+          <span class="q-label">How does your child currently communicate? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Spoken language" /><span class="box"></span>Spoken language</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Speech approximations" /><span class="box"></span>Speech approximations</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Sign Language (ASL)" /><span class="box"></span>Sign Language (ASL)</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Gestures" /><span class="box"></span>Gestures</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Pointing" /><span class="box"></span>Pointing</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Eye gaze" /><span class="box"></span>Eye gaze</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="AAC device" /><span class="box"></span>AAC device</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Communication application" /><span class="box"></span>Communication application</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="PECS" /><span class="box"></span>PECS</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Pictures/photos" /><span class="box"></span>Pictures/photos</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Typing/spelling" /><span class="box"></span>Typing/spelling</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="Writing" /><span class="box"></span>Writing</label>
+            <label class="choice-check"><input type="checkbox" id="comm_mixed" name="Communication methods" value="Mixed methods" /><span class="box"></span>Mixed methods</label>
+            <label class="choice-check"><input type="checkbox" name="Communication methods" value="No reliable expressive communication currently observed" /><span class="box"></span>No reliable expressive communication currently observed</label>
+          </div>
+        </div>
+        <div class="field conditional" id="comm_other_wrap" hidden>
+          <label class="q" for="comm_desc">If you selected Mixed Methods, please describe all communication methods your child currently uses:</label>
+          <textarea id="comm_desc" name="Communication methods (describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ SOCIAL COMMUNICATION, PLAY & LEARNING ============ -->
+      <fieldset>
+        <legend>Social Communication, Play &amp; Learning Profile</legend>
+        <p class="section-hint">This section helps us understand how your child communicates, learns, engages with others, participates in shared experiences, and navigates social environments. Please check all that apply.</p>
+
+        <h3 class="subhead">Social Communication &amp; Connection</h3>
+        <div class="field">
+          <span class="q-label">My child currently:</span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Shares attention with others" /><span class="box"></span>Shares attention with others</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Looks where others point" /><span class="box"></span>Looks where others point</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Follows another person's gaze" /><span class="box"></span>Follows another person's gaze</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Brings items to show others" /><span class="box"></span>Brings items to show others</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Shares interests or discoveries" /><span class="box"></span>Shares interests or discoveries</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Initiates interactions with others" /><span class="box"></span>Initiates interactions with others</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Responds when others initiate interaction" /><span class="box"></span>Responds when others initiate interaction</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Uses eye gaze meaningfully" /><span class="box"></span>Uses eye gaze meaningfully</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Uses facial expressions to communicate" /><span class="box"></span>Uses facial expressions to communicate</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Uses gestures to communicate" /><span class="box"></span>Uses gestures to communicate</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Uses social referencing" /><span class="box"></span>Uses social referencing (checks in during activities)</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Seeks others out for shared experiences" /><span class="box"></span>Seeks others out for shared experiences</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Demonstrates joint attention" /><span class="box"></span>Demonstrates joint attention</label>
+            <label class="choice-check"><input type="checkbox" name="Social communication & connection" value="Demonstrates joint engagement" /><span class="box"></span>Demonstrates joint engagement</label>
+            <label class="choice-check"><input type="checkbox" id="sc_other" name="Social communication & connection" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="sc_other_wrap" hidden>
+          <label class="q" for="sc_other_desc">Other (describe):</label>
+          <textarea id="sc_other_desc" name="Social communication — other (describe)"></textarea>
+        </div>
+
+        <h3 class="subhead">Learning Through Observation &amp; Imitation</h3>
+        <div class="field">
+          <span class="q-label">My child currently:</span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Learns by observing others" /><span class="box"></span>Learns by observing others</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Imitates motor movements" /><span class="box"></span>Imitates motor movements</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Imitates actions during play" /><span class="box"></span>Imitates actions during play</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Imitates speech sounds or words" /><span class="box"></span>Imitates speech sounds or words</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Imitates sign language" /><span class="box"></span>Imitates sign language</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Imitates AAC/device use" /><span class="box"></span>Imitates AAC/device use</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Learns from media content" /><span class="box"></span>Learns from media content</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Follows demonstrations" /><span class="box"></span>Follows demonstrations</label>
+            <label class="choice-check"><input type="checkbox" name="Learning through observation & imitation" value="Benefits from hand-over-hand modeling" /><span class="box"></span>Benefits from hand-over-hand modeling</label>
+            <label class="choice-check"><input type="checkbox" id="obs_other" name="Learning through observation & imitation" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="obs_other_wrap" hidden>
+          <label class="q" for="obs_other_desc">Other (describe):</label>
+          <textarea id="obs_other_desc" name="Observation/imitation — other (describe)"></textarea>
+        </div>
+
+        <h3 class="subhead">Play Development</h3>
+        <div class="field">
+          <span class="q-label">My child currently engages in:</span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Independent play" /><span class="box"></span>Independent play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Parallel play" /><span class="box"></span>Parallel play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Joint play" /><span class="box"></span>Joint play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Turn-taking activities" /><span class="box"></span>Turn-taking activities</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Pretend play" /><span class="box"></span>Pretend play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Imaginative play" /><span class="box"></span>Imaginative play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Symbolic play" /><span class="box"></span>Symbolic play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Collaborative play" /><span class="box"></span>Collaborative play</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Cooperative games" /><span class="box"></span>Cooperative games</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Building activities with others" /><span class="box"></span>Building activities with others</label>
+            <label class="choice-check"><input type="checkbox" name="Play development" value="Creative storytelling" /><span class="box"></span>Creative storytelling</label>
+            <label class="choice-check"><input type="checkbox" id="play_other" name="Play development" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="play_other_wrap" hidden>
+          <label class="q" for="play_other_desc">Other (describe):</label>
+          <textarea id="play_other_desc" name="Play development — other (describe)"></textarea>
+        </div>
+
+        <h3 class="subhead">Social Participation &amp; Flexibility</h3>
+        <div class="field">
+          <span class="q-label">My child currently:</span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Participates in small groups" /><span class="box"></span>Participates in small groups</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Participates in community-based activities" /><span class="box"></span>Participates in community-based activities</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Waits for preferred items or activities" /><span class="box"></span>Waits for preferred items or activities</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Waits for turns" /><span class="box"></span>Waits for turns</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Transitions between activities successfully" /><span class="box"></span>Transitions between activities successfully</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Adapts to changes in routine" /><span class="box"></span>Adapts to changes in routine</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Tolerates unexpected changes" /><span class="box"></span>Tolerates unexpected changes</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Follows group expectations" /><span class="box"></span>Follows group expectations</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Participates alongside peers" /><span class="box"></span>Participates alongside peers</label>
+            <label class="choice-check"><input type="checkbox" name="Social participation & flexibility" value="Demonstrates flexibility during activities" /><span class="box"></span>Demonstrates flexibility during activities</label>
+            <label class="choice-check"><input type="checkbox" id="part_other" name="Social participation & flexibility" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="part_other_wrap" hidden>
+          <label class="q" for="part_other_desc">Other (describe):</label>
+          <textarea id="part_other_desc" name="Social participation — other (describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ STRENGTHS / SUPPORT / INSIGHTS ============ -->
+      <fieldset>
+        <legend>Interests, Motivators &amp; Strengths</legend>
+        <div class="field">
+          <label class="q" for="interests">Please share your child's strongest interests, passions, talents, motivators, and areas of strength. <span class="optional">optional</span></label>
+          <textarea id="interests" name="Interests, motivators & strengths" style="min-height:120px"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Support Strategies</legend>
+        <div class="field">
+          <label class="q" for="supports">Please share any accommodations, supports, teaching approaches, sensory strategies, or communication methods that have been particularly successful. <span class="optional">optional</span></label>
+          <textarea id="supports" name="Support strategies" style="min-height:120px"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Parent Insights</legend>
+        <div class="field">
+          <label class="q" for="insights">What else would you like us to know about your child to help us better understand, support, and partner with your family? <span class="optional">optional</span></label>
+          <textarea id="insights" name="Additional parent insights" style="min-height:120px"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ SAFETY ============ -->
+      <fieldset>
+        <legend>Safety Considerations</legend>
+        <div class="field">
+          <span class="q-label">Does your child currently demonstrate any behaviors that may present a safety concern? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="No Known Safety Concerns" /><span class="box"></span>No Known Safety Concerns</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Elopement / Wandering" /><span class="box"></span>Elopement / Wandering</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Self-Injurious Behaviors" /><span class="box"></span>Self-Injurious Behaviors</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Aggression Toward Others" /><span class="box"></span>Aggression Toward Others</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Property Destruction" /><span class="box"></span>Property Destruction</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Pica" /><span class="box"></span>Pica</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Unsafe Climbing or Risk-Seeking Behaviors" /><span class="box"></span>Unsafe Climbing / Risk-Seeking</label>
+            <label class="choice-check"><input type="checkbox" name="Safety concerns" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="q" for="safety_desc">If selected, please describe: <span class="optional">optional</span></label>
+          <textarea id="safety_desc" name="Safety concerns (describe)"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ COMMUNITY READINESS + EXPERIENCE ============ -->
+      <fieldset>
+        <legend>Therapy, Recreation &amp; Educational Experience</legend>
+        <p class="section-hint">Because many learning experiences occur beyond the home — during walks, community outings, sports, field trips, and real-world activities — this helps us determine the support, supervision, and accommodations each learner needs to participate safely and successfully.</p>
+
+        <h3 class="subhead">Community Participation Readiness</h3>
+        <div class="scale-key"><strong>Scale:</strong> Not Yet · Emerging · Developing · Consistent · Independent</div>
+        <p class="q-label">How comfortable is your child in the following environments?</p>
+        <div class="matrix" id="readiness"><!-- rows injected by script --></div>
+
+        <div class="field" style="margin-top:var(--s-xl)">
+          <label class="q" for="community_safety">What safety concerns should we be aware of when supporting your child in community-based learning, outings, sports, field trips, or daily activities? <span class="optional">optional</span></label>
+          <textarea id="community_safety" name="Community-based safety concerns" style="min-height:110px"></textarea>
+        </div>
+
+        <h3 class="subhead">Emergency Information</h3>
+        <div class="field">
+          <span class="q-label">Has your child ever required emergency intervention due to a safety-related incident?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Required emergency intervention?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Required emergency intervention?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="emergency_int_wrap" hidden>
+          <label class="q" for="emergency_int_desc">If yes, please explain:</label>
+          <textarea id="emergency_int_desc" name="Emergency intervention (explain)"></textarea>
+        </div>
+
+        <h3 class="subhead">Experience With Approaches</h3>
+        <div class="scale-key"><strong>Rating scale:</strong> Never Used · Tried, Not a Good Fit · Somewhat Helpful · Very Helpful · Transformational / Game Changer</div>
+        <div class="matrix" id="matrix"><!-- rows injected by script --></div>
+
+        <div class="field" style="margin-top:var(--s-xl)">
+          <label class="q" for="notfit">What approaches were not a good fit for your child and why? <span class="optional">optional</span></label>
+          <textarea id="notfit" name="Approaches that were not a good fit" style="min-height:110px"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ FAMILY GOALS ============ -->
+      <fieldset>
+        <legend>Family Goals</legend>
+        <div class="field">
+          <label class="q" for="why">Why are you interested in Just on the Spectrum Microschool? <span class="optional">optional</span></label>
+          <textarea id="why" name="Why interested in Just on the Spectrum" style="min-height:110px"></textarea>
+        </div>
+        <div class="field">
+          <span class="q-label">What are your primary goals for your child? <span class="optional">check all that apply</span></span>
+          <div class="choices">
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Communication" /><span class="box"></span>Communication</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Life Skills" /><span class="box"></span>Life Skills</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Independence" /><span class="box"></span>Independence</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Social Development" /><span class="box"></span>Social Development</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Community Participation" /><span class="box"></span>Community Participation</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Academics" /><span class="box"></span>Academics</label>
+            <label class="choice-check"><input type="checkbox" name="Primary goals" value="Recreation" /><span class="box"></span>Recreation</label>
+            <label class="choice-check"><input type="checkbox" id="goal_other" name="Primary goals" value="Other" /><span class="box"></span>Other</label>
+          </div>
+        </div>
+        <div class="field conditional" id="goal_other_wrap" hidden>
+          <label class="q" for="goal_other_desc">If Other, please describe:</label>
+          <textarea id="goal_other_desc" name="Other goal (describe)"></textarea>
+        </div>
+        <div class="field">
+          <label class="q" for="qualities">What qualities are you looking for in a learning community? <span class="optional">optional</span></label>
+          <textarea id="qualities" name="Qualities sought in a learning community" style="min-height:110px"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ SOCIAL MEDIA / SAFETY ============ -->
+      <fieldset>
+        <legend>Social Media, Family &amp; Community Safety</legend>
+        <p class="section-hint">Because the microschool operates from a private family property, maintaining a safe, respectful, and supportive environment for all children and families is essential.</p>
+
+        <div class="field">
+          <span class="q-label">Do you have any public social media accounts that you actively use?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Public social media accounts?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Public social media accounts?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="social_wrap" hidden>
+          <label class="q" for="social_desc">If yes, please list the platform(s) and account name(s):</label>
+          <textarea id="social_desc" name="Social media (platforms & handles)"></textarea>
+        </div>
+
+        <div class="field">
+          <span class="q-label">Have you ever been asked to leave, removed from, or restricted from participation in a school, homeschool group, co-op, therapy program, sports organization, community group, or educational program?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Removed from a program?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Removed from a program?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="removed_wrap" hidden>
+          <label class="q" for="removed_desc">If yes, please explain:</label>
+          <textarea id="removed_desc" name="Removed from program (explain)"></textarea>
+        </div>
+
+        <div class="field">
+          <span class="q-label">Have there been any significant behavioral, safety, or interpersonal concerns involving a parent, guardian, or child that you believe we should be aware of when considering enrollment?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Prior behavioral/safety/interpersonal concerns?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Prior behavioral/safety/interpersonal concerns?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="concerns_wrap" hidden>
+          <label class="q" for="concerns_desc">If yes, please explain:</label>
+          <textarea id="concerns_desc" name="Prior concerns (explain)"></textarea>
+        </div>
+
+        <div class="field">
+          <span class="q-label">Are there any active court orders, custody restrictions, restraining orders, or other legal considerations that may affect participation or interactions with other families?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="Legal considerations?" value="No" /><span class="dot"></span>No</label>
+            <label class="choice"><input type="radio" name="Legal considerations?" value="Yes" /><span class="dot"></span>Yes</label>
+          </div>
+        </div>
+        <div class="field conditional" id="legal_wrap" hidden>
+          <label class="q" for="legal_desc">If yes, please explain:</label>
+          <textarea id="legal_desc" name="Legal considerations (explain)"></textarea>
+        </div>
+
+        <div class="field">
+          <span class="q-label">May we request references from educational, homeschool, therapy, recreational, or community programs your family has participated in if needed?</span>
+          <div class="choices" role="radiogroup">
+            <label class="choice"><input type="radio" name="May we request references?" value="Yes" /><span class="dot"></span>Yes</label>
+            <label class="choice"><input type="radio" name="May we request references?" value="No" /><span class="dot"></span>No</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ PROGRAM ALIGNMENT ============ -->
+      <fieldset>
+        <legend>Program Alignment</legend>
+        <p class="section-hint">Please acknowledge the following <span class="req">*</span></p>
+        <div class="choices stack">
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: not a traditional school" value="Yes" required /><span class="box"></span>I understand this is not a traditional school.</label>
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: not a drop-off program" value="Yes" required /><span class="box"></span>I understand this is not a drop-off program.</label>
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: parent is primary educator" value="Yes" required /><span class="box"></span>I view myself as my child's primary educator.</label>
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: willing to be 1:1 support" value="Yes" required /><span class="box"></span>I am willing to remain actively involved as my child's dedicated 1:1 support person.</label>
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: attendance/scheduling differs" value="Yes" required /><span class="box"></span>I understand attendance and scheduling may differ significantly from a traditional school environment.</label>
+          <label class="choice-check"><input type="checkbox" name="Acknowledges: program supports, not replaces, home education" value="Yes" required /><span class="box"></span>I am seeking a flexible, child-led educational experience and coaching, and understand that this program is designed to support and enhance our home-education journey, not replace it.</label>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ ADDITIONAL INFO ============ -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <div class="field">
+          <label class="q" for="additional">Is there anything else you would like us to know about your child or family? <span class="optional">optional</span></label>
+          <textarea id="additional" name="Additional information" style="min-height:120px"></textarea>
+        </div>
+      </fieldset>
+
+      <hr class="divider" />
+
+      <!-- ============ ACKNOWLEDGMENT ============ -->
+      <fieldset>
+        <legend>Acknowledgment</legend>
+        <div class="context" style="margin-bottom:var(--s-lg)">
+          <p>
+            Submitting this questionnaire does not guarantee enrollment. Families may be invited
+            to participate in a parent interview and student observation before enrollment
+            decisions are made. Enrollment decisions are based on program fit, family alignment,
+            safety considerations, and available space.
+          </p>
+        </div>
+        <div class="choices stack">
+          <label class="choice-check"><input type="checkbox" name="Final acknowledgment" value="I understand and agree." required /><span class="box"></span>I understand and agree. <span class="req">*</span></label>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Submit questionnaire</button>
+        <p class="privacy">Your responses are shared only with the Just on the Spectrum enrollment team.</p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span class="wordmark">
+        <svg class="spike" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 1.5l1.7 6.9 5.1-4.9-2.9 6.4 6.9-1.6-6.2 3.2 6.2 3.2-6.9-1.6 2.9 6.4-5.1-4.9L12 22.5l-1.7-6.9-5.1 4.9 2.9-6.4-6.9 1.6 6.2-3.2-6.2-3.2 6.9 1.6-2.9-6.4 5.1 4.9z"/>
+        </svg>
+        <span>Just on the Spectrum Microschool</span>
+      </span>
+      <p>Family-centered, child-led home education. Enrollment is limited and based on program fit, family alignment, safety considerations, and available space.</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Matrices (generated) =====
+    function buildMatrix(containerId, items, options, prefix, includeOther) {
+      var mc = document.getElementById(containerId);
+      function makeSelect(name) {
+        var sel = document.createElement('select');
+        sel.name = name;
+        sel.appendChild(new Option('—', ''));
+        options.forEach(function (r) { sel.appendChild(new Option(r, r)); });
+        return sel;
+      }
+      items.forEach(function (a) {
+        var row = document.createElement('div'); row.className = 'matrix-row';
+        var lbl = document.createElement('div'); lbl.className = 'approach'; lbl.textContent = a;
+        row.appendChild(lbl);
+        row.appendChild(makeSelect(prefix + a));
+        mc.appendChild(row);
+      });
+      if (includeOther) {
+        var orow = document.createElement('div'); orow.className = 'matrix-row';
+        var oin = document.createElement('input'); oin.type = 'text';
+        oin.name = prefix + 'Other (describe)'; oin.placeholder = 'Other approach…';
+        orow.appendChild(oin);
+        orow.appendChild(makeSelect(prefix + 'Other (rating)'));
+        mc.appendChild(orow);
+      }
+    }
+
+    var readinessEnvironments = [
+      "Parks & Playgrounds", "Stores & Shopping Centers", "Restaurants", "Sports Programs",
+      "Museums", "Community Events", "Waiting in Line", "Field Trips"
+    ];
+    var readinessScale = ["Not Yet", "Emerging", "Developing", "Consistent", "Independent"];
+
+    var approaches = [
+      "Speech Therapy", "Occupational Therapy (OT)", "Physical Therapy (PT)", "Feeding Therapy",
+      "ABA", "DIR/Floortime", "JASPER", "PROMPT", "AAC-Based Intervention", "Sign Language",
+      "Spelling-Based Communication", "Exposure-Based Learning / Exposure Therapy", "Community-Based Learning",
+      "Teacher-Led Education", "Child-Led Education", "Unschooling", "Roadschooling", "Track & Field",
+      "Music Therapy", "Art Classes", "Theater / Performing Arts", "Swimming", "Gymnastics",
+      "Equine / Horseback Riding", "Special Olympics", "Team Sports", "Individual Sports", "Martial Arts",
+      "Outdoor Education / Nature-Based Learning"
+    ];
+    var ratings = ["Never Used", "Tried, Not a Good Fit", "Somewhat Helpful", "Very Helpful", "Transformational / Game Changer"];
+
+    buildMatrix('readiness', readinessEnvironments, readinessScale, 'Community readiness — ', false);
+    buildMatrix('matrix', approaches, ratings, 'Experience — ', true);
+
+    // ===== Conditional reveal helpers =====
+    function clearWrap(wrap) {
+      wrap.querySelectorAll('input, textarea, select').forEach(function (el) {
+        if (el.type === 'radio' || el.type === 'checkbox') el.checked = false;
+        else el.value = '';
+      });
+    }
+    function showWhenRadio(name, wrapId, values) {
+      var wrap = document.getElementById(wrapId);
+      document.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
+        input.addEventListener('change', function () {
+          var show = input.checked && values.indexOf(input.value) !== -1;
+          wrap.hidden = !show;
+          if (!show) clearWrap(wrap);
+        });
+      });
+    }
+    function showWhenAnyChecked(ids, wrapId) {
+      var wrap = document.getElementById(wrapId);
+      var boxes = ids.map(function (id) { return document.getElementById(id); });
+      function sync() {
+        var show = boxes.some(function (b) { return b.checked; });
+        wrap.hidden = !show;
+        if (!show) clearWrap(wrap);
+      }
+      boxes.forEach(function (b) { b.addEventListener('change', sync); });
+    }
+
+    showWhenAnyChecked(['diag_autism'], 'autism_profile_wrap');
+    showWhenAnyChecked(['diag_other'], 'diag_other_wrap');
+    showWhenAnyChecked(['diet_other'], 'diet_other_wrap');
+    showWhenAnyChecked(['comm_mixed'], 'comm_other_wrap');
+    showWhenAnyChecked(['sc_other'], 'sc_other_wrap');
+    showWhenAnyChecked(['obs_other'], 'obs_other_wrap');
+    showWhenAnyChecked(['play_other'], 'play_other_wrap');
+    showWhenAnyChecked(['part_other'], 'part_other_wrap');
+    showWhenAnyChecked(['goal_other'], 'goal_other_wrap');
+
+    showWhenRadio('Toileting status', 'toilet_other_wrap', ['Other']);
+    showWhenRadio('Medical conditions present?', 'medical_wrap', ['Yes']);
+    showWhenRadio('Takes medications affecting participation?', 'meds_wrap', ['Yes']);
+    showWhenRadio('Seizure history?', 'seizure_wrap', ['Yes']);
+    showWhenRadio('Required emergency intervention?', 'emergency_int_wrap', ['Yes']);
+    showWhenRadio('Public social media accounts?', 'social_wrap', ['Yes']);
+    showWhenRadio('Removed from a program?', 'removed_wrap', ['Yes']);
+    showWhenRadio('Prior behavioral/safety/interpersonal concerns?', 'concerns_wrap', ['Yes']);
+    showWhenRadio('Legal considerations?', 'legal_wrap', ['Yes']);
+
+    // ===== Submit to Web3Forms =====
+    var form = document.getElementById('questionnaire');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      var parent = (form.elements['Parent/Guardian name'].value || '').trim();
+      form.elements['subject'].value = parent
+        ? 'Enrollment Questionnaire (Part 2) — ' + parent
+        : 'Enrollment Questionnaire (Part 2) — Just on the Spectrum';
+
+      try {
+        var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
+        var data = await res.json();
+        if (res.ok && data.success) {
+          form.querySelector('.actions').innerHTML =
+            '<p style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin:0 0 6px;">Thank you — your questionnaire has been submitted.</p>' +
+            '<p class="privacy">We\'ll review it and be in touch at the email you provided. You can close this page.</p>';
+          window.scrollTo({ top: form.querySelector('.actions').offsetTop - 120, behavior: 'smooth' });
+        } else {
+          throw new Error((data && data.message) || 'Submission failed');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = label;
+        alert('Sorry — something went wrong submitting the form. Please try again, or email justonthespectrum@gmail.com directly.');
+      }
+    });
+  </script>
+</body>
+</html>
