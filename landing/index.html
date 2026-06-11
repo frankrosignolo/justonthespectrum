@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just on the Spectrum — Real life, raising kids on the autism spectrum</title>
+  <meta name="description" content="Educational content, resources, and practical guides for parents raising children on the autism spectrum. The real day-to-day highs and lows, documented with love." />
+  <meta property="og:title" content="Just on the Spectrum" />
+  <meta property="og:description" content="Real life, raising kids on the autism spectrum — the highs, the lows, and everything in between." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='62' r='14' fill='%23FF5D73'/%3E%3Ccircle cx='42' cy='44' r='14' fill='%23FFC53D'/%3E%3Ccircle cx='64' cy='38' r='14' fill='%232EC4A9'/%3E%3Ccircle cx='84' cy='50' r='14' fill='%238C5BF2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Just on the Spectrum — home">
+      <svg class="nav__dots" viewBox="0 0 104 64" aria-hidden="true">
+        <circle cx="16" cy="42" r="13" fill="#FF5D73"/>
+        <circle cx="42" cy="28" r="13" fill="#FFC53D"/>
+        <circle cx="68" cy="22" r="13" fill="#2EC4A9"/>
+        <circle cx="90" cy="32" r="13" fill="#8C5BF2"/>
+      </svg>
+      <span class="nav__name">Just <em>on the</em> Spectrum</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#story">Our story</a>
+      <a href="#pillars">What we make</a>
+      <a href="#moments">Highs &amp; lows</a>
+      <a href="#join">Join us</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false">
+        <span class="motion-toggle__dot" aria-hidden="true"></span>
+        <span class="motion-toggle__label">Reduce motion</span>
+      </button>
+      <a class="btn btn--small" href="#join">Follow along</a>
+      <button class="nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="menu" id="mobileMenu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#story">Our story</a>
+      <a href="#pillars">What we make</a>
+      <a href="#moments">Highs &amp; lows</a>
+      <a href="#join">Join us</a>
+    </nav>
+    <button class="motion-toggle motion-toggle--menu" data-motion-toggle type="button" aria-pressed="false">
+      <span class="motion-toggle__dot" aria-hidden="true"></span>
+      <span class="motion-toggle__label">Reduce motion</span>
+    </button>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__shapes" aria-hidden="true">
+        <span class="shape shape--ring" data-depth="0.5"></span>
+        <span class="shape shape--dot shape--dot-1" data-depth="0.9"></span>
+        <span class="shape shape--dot shape--dot-2" data-depth="0.35"></span>
+        <span class="shape shape--star" data-depth="0.7">
+          <svg viewBox="0 0 100 100"><path d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z" fill="currentColor"/></svg>
+        </span>
+        <span class="shape shape--squiggle" data-depth="0.6">
+          <svg viewBox="0 0 200 40" fill="none"><path d="M2 20 Q 27 -10 52 20 T 102 20 T 152 20 T 198 20" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg>
+        </span>
+        <span class="shape shape--half" data-depth="0.45"></span>
+        <span class="shape shape--cross" data-depth="0.8">
+          <svg viewBox="0 0 100 100"><path d="M42 0 h16 v42 h42 v16 h-42 v42 h-16 v-42 h-42 v-16 h42 Z" fill="currentColor"/></svg>
+        </span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-hero-fade>
+          <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+          For parents raising kids on the autism spectrum
+        </p>
+
+        <h1 class="hero__title" id="heroTitle">
+          <span class="line">Parenting on</span>
+          <span class="line">the spectrum,</span>
+          <span class="line line--accent"><em>in full color.</em></span>
+        </h1>
+
+        <p class="hero__sub" data-hero-fade>
+          We document the real, unfiltered day-to-day of raising children on the
+          autism spectrum — and turn it into guides, resources, and content that
+          make other parents feel a little less alone.
+        </p>
+
+        <div class="hero__rotator" data-hero-fade aria-hidden="true">
+          <span class="hero__rotator-static">Sharing</span>
+          <span class="hero__rotator-words" id="rotator">
+            <span class="is-active">the meltdowns</span>
+            <span>the milestones</span>
+            <span>the small wins</span>
+            <span>the hard days</span>
+            <span>the breakthroughs</span>
+            <span>all of it</span>
+          </span>
+        </div>
+
+        <div class="hero__cta" data-hero-fade>
+          <a class="btn btn--big" href="#join">Follow the journey</a>
+          <a class="btn btn--big btn--ghost" href="#pillars">Explore our guides</a>
+        </div>
+      </div>
+
+      <div class="hero__scrollcue" data-hero-fade aria-hidden="true">
+        <span class="hero__scrollcue-text">scroll</span>
+        <span class="hero__scrollcue-line"></span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <div class="marquee__group">
+          <span>real life</span><i class="m-dot m-coral"></i>
+          <span>no scripts</span><i class="m-dot m-yellow"></i>
+          <span>no filters</span><i class="m-dot m-green"></i>
+          <span>practical guides</span><i class="m-dot m-blue"></i>
+          <span>sensory friendly</span><i class="m-dot m-violet"></i>
+          <span>IEP season survival</span><i class="m-dot m-pink"></i>
+          <span>celebrate every win</span><i class="m-dot m-orange"></i>
+        </div>
+        <div class="marquee__group">
+          <span>real life</span><i class="m-dot m-coral"></i>
+          <span>no scripts</span><i class="m-dot m-yellow"></i>
+          <span>no filters</span><i class="m-dot m-green"></i>
+          <span>practical guides</span><i class="m-dot m-blue"></i>
+          <span>sensory friendly</span><i class="m-dot m-violet"></i>
+          <span>IEP season survival</span><i class="m-dot m-pink"></i>
+          <span>celebrate every win</span><i class="m-dot m-orange"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story section" id="story">
+      <div class="section__inner">
+        <p class="kicker" data-reveal><span class="kicker__bar k-coral"></span>Our story</p>
+        <h2 class="story__title" data-split>
+          No experts in suits. Just parents in the thick of it, sharing what actually helps.
+        </h2>
+        <div class="story__cols">
+          <p data-reveal>
+            Just on the Spectrum started with a camera, a kitchen table, and a kid
+            who sees the world differently. We post the moments most families keep
+            private — the waiting rooms, the victories, the 2&nbsp;a.m. worries —
+            because somewhere out there, another parent is living the same moment
+            and wondering if they're the only one.
+          </p>
+          <p data-reveal>
+            Along the way, the diary became a library: step-by-step guides,
+            printable tools, and honest talk about therapies, school, and
+            self-care. Everything we make answers one question — <em>what do I
+            wish someone had told us sooner?</em>
+          </p>
+        </div>
+
+        <ul class="stats" role="list">
+          <li class="stat" data-reveal>
+            <span class="stat__num n-coral" data-count="365">0</span>
+            <span class="stat__label">days a year, documented</span>
+          </li>
+          <li class="stat" data-reveal>
+            <span class="stat__num n-green" data-count="100" data-suffix="+">0</span>
+            <span class="stat__label">practical guides &amp; resources</span>
+          </li>
+          <li class="stat" data-reveal>
+            <span class="stat__num n-violet" data-count="1">0</span>
+            <span class="stat__label">real family, zero filters</span>
+          </li>
+          <li class="stat" data-reveal>
+            <span class="stat__num n-orange">∞</span>
+            <span class="stat__label">patience <em>(most days)</em></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PILLARS ============ -->
+    <section class="pillars section section--dark" id="pillars">
+      <div class="section__inner">
+        <p class="kicker kicker--light" data-reveal><span class="kicker__bar k-yellow"></span>What we make</p>
+        <h2 class="pillars__title" data-split>Four ways we've got your back</h2>
+
+        <div class="cards">
+          <article class="card card--coral" data-card>
+            <span class="card__num">01</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="26" rx="5" stroke="currentColor" stroke-width="3"/><path d="M21 18 L30 23 L21 28 Z" fill="currentColor"/><path d="M16 42 h16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Day-in-the-life videos</h3>
+            <p>Unscripted snapshots of our actual routines — mornings, therapies, school runs, wind-downs — so you can see strategies in motion, not just in theory.</p>
+          </article>
+
+          <article class="card card--yellow" data-card>
+            <span class="card__num">02</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M10 8 h22 l8 8 v24 a2 2 0 0 1 -2 2 H10 a2 2 0 0 1 -2 -2 V10 a2 2 0 0 1 2 -2 Z" stroke="currentColor" stroke-width="3"/><path d="M16 22 h16 M16 29 h16 M16 36 h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Practical guides</h3>
+            <p>Step-by-step playbooks for the big stuff: diagnosis day, IEP meetings, picky eating, sleep, public meltdowns, and telling family what you need.</p>
+          </article>
+
+          <article class="card card--green" data-card>
+            <span class="card__num">03</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 v30 M24 36 l-9 -9 M24 36 l9 -9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40 h32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Printable resources</h3>
+            <p>Visual schedules, sensory checklists, appointment trackers, and scripts you can download, print, and stick on the fridge tonight.</p>
+          </article>
+
+          <article class="card card--violet" data-card>
+            <span class="card__num">04</span>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="17" cy="18" r="7" stroke="currentColor" stroke-width="3"/><circle cx="33" cy="20" r="5" stroke="currentColor" stroke-width="3"/><path d="M5 40 c0 -8 6 -12 12 -12 s12 4 12 12 M29 31 c6 -1 14 2 14 9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </span>
+            <h3>A community that gets it</h3>
+            <p>Comment sections that feel like group chats. Thousands of parents trading wins, warnings, and encouragement — no judgment, ever.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HIGHS & LOWS ============ -->
+    <section class="moments section" id="moments">
+      <div class="section__inner moments__head">
+        <p class="kicker" data-reveal><span class="kicker__bar k-blue"></span>The real day-to-day</p>
+        <h2 data-split>The highs <em>and</em> the lows. We post both.</h2>
+        <p class="moments__sub" data-reveal>Because the hard parts deserve honesty, and the good parts deserve confetti.</p>
+      </div>
+
+      <div class="moments__viewport" id="momentsViewport">
+        <div class="moments__track" id="momentsTrack">
+          <article class="moment moment--high">
+            <span class="moment__tag">a high</span>
+            <p>He ordered for himself at the restaurant today. Unprompted. We didn't make it weird — we cried in the car.</p>
+            <span class="moment__icon" aria-hidden="true">☀️</span>
+          </article>
+          <article class="moment moment--low">
+            <span class="moment__tag">a low</span>
+            <p>The waiting-room meltdown nobody warns you about — fluorescent lights, strangers staring, and you, holding it together.</p>
+            <span class="moment__icon" aria-hidden="true">🌧️</span>
+          </article>
+          <article class="moment moment--high">
+            <span class="moment__tag">a high</span>
+            <p>Three months of AAC practice. Then, out of nowhere: <em>"more bubbles."</em> The whole house celebrated.</p>
+            <span class="moment__icon" aria-hidden="true">🫧</span>
+          </article>
+          <article class="moment moment--low">
+            <span class="moment__tag">a low</span>
+            <p>IEP meeting #7. Still advocating, still rereading the paperwork at midnight, still exhausted. We made a guide so you don't start from zero.</p>
+            <span class="moment__icon" aria-hidden="true">📋</span>
+          </article>
+          <article class="moment moment--high">
+            <span class="moment__tag">a high</span>
+            <p>Full-volume happy stimming to his favorite song in the kitchen. Pure, uncontainable joy. We turned it up.</p>
+            <span class="moment__icon" aria-hidden="true">🎶</span>
+          </article>
+          <article class="moment moment--low">
+            <span class="moment__tag">a low</span>
+            <p>The birthday party invites that never come. We talk about it openly — and about building a circle that shows up.</p>
+            <span class="moment__icon" aria-hidden="true">💌</span>
+          </article>
+          <article class="moment moment--high">
+            <span class="moment__tag">a high</span>
+            <p>She slept through the night. So we did too. Eight hours never made two people so emotional.</p>
+            <span class="moment__icon" aria-hidden="true">🌙</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOIN / CTA ============ -->
+    <section class="join section" id="join">
+      <div class="join__card" data-reveal>
+        <div class="join__confetti" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <h2 class="join__title" data-split>Come for the chaos. Stay for the wins.</h2>
+        <p class="join__sub">Follow the daily journey on social, or get our best guides in your inbox — written for parents, by parents, at nap-time speed.</p>
+
+        <div class="join__socials">
+          <!-- TODO: replace # with your real profile URLs -->
+          <a class="social" href="#" aria-label="Just on the Spectrum on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social" href="#" aria-label="Just on the Spectrum on TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.3 1.9 3.8 4.4 4v3.2c-1.6 0-3-.5-4.4-1.4v6.5c0 4.1-3.4 6.7-7 5.6-2.5-.8-4.1-3.2-3.8-5.8.3-3 2.9-5 6-4.7v3.3c-1.4-.3-2.6.2-3 1.5-.4 1.2.3 2.5 1.5 2.9 1.5.5 3-.6 3-2.3V3h3.3Z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a class="social" href="#" aria-label="Just on the Spectrum on YouTube">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="2"/><path d="M10 9.5 L15 12 L10 14.5 Z" fill="currentColor"/></svg>
+            <span>YouTube</span>
+          </a>
+        </div>
+
+        <form class="join__form" id="newsletterForm" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <button class="btn btn--big" type="submit">Send me the guides</button>
+        </form>
+        <p class="join__note" id="formNote">One email a week, tops. Unsubscribe anytime — no hard feelings.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg class="nav__dots" viewBox="0 0 104 64" aria-hidden="true">
+          <circle cx="16" cy="42" r="13" fill="#FF5D73"/>
+          <circle cx="42" cy="28" r="13" fill="#FFC53D"/>
+          <circle cx="68" cy="22" r="13" fill="#2EC4A9"/>
+          <circle cx="90" cy="32" r="13" fill="#8C5BF2"/>
+        </svg>
+        <p>Just on the Spectrum documents the real day-to-day of raising children on the autism spectrum — and turns it into resources that help other families breathe easier.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#story">Our story</a>
+        <a href="#pillars">What we make</a>
+        <a href="#moments">Highs &amp; lows</a>
+        <a href="mailto:justonthespectrum@gmail.com">Contact</a>
+      </nav>
+      <p class="footer__legal">© <span id="year">2026</span> Just on the Spectrum. Made with love, coffee, and a very specific playlist.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
